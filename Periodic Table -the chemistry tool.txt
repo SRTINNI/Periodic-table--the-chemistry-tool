@@ -5,16 +5,60 @@
 #include<iostream>
 #include<stdlib.h>
 #include<string.h>
-#include<fstream>
-/*delay(1000);
-cleardevice();
-line(0,30,30,30);*/
 
-int main()
+using namespace std;
+
+
+int a=0;
+
+class pt
+{
+public:
+       int i,j;
+      void showtable();
+     // void getdata();
+      void putdata();
+
+};
+void pt::showtable()
 {
     int gm,gd=DETECT,i,j;
     initgraph(&gd,&gm,"C:\TC\BGI");
-    delay(1000);
+
+    cleardevice();
+    setcolor(4);
+    settextstyle(3,0,5);
+    outtextxy(80,250,"MODERN PERIODIC-TABLE");
+    setcolor(13);
+    outtextxy(75,300,"#########################");
+    outtextxy(124,150,"####################");
+    delay(50);
+    for(i=5;i<=630;i=i+10)
+    {
+         for(j=0;j<=5;j=j+1)
+           {
+              setcolor(j);
+              line(i,460,j+15,i);
+              line(i,460,j+1,i);
+              circle(i,20,j+15);
+              circle(i,20,j+1);
+               delay(15);
+           }
+    }
+    cleardevice();
+    delay(50);
+    settextstyle(1,0,3);
+    setcolor(13);
+    outtextxy(200,100,"PREPARED BY :-");
+    setcolor(17);
+    outtextxy(250,130,"_____________");
+    settextstyle(1,0,3);
+    setcolor(3);
+    outtextxy(80,160,"###MST.SAHELA RAHMAN##");
+    outtextxy(200,210,"CSE,2k16-2k17");
+    outtextxy(200,260,"###TEC,BOGURA###");
+
+     delay(1000);
     cleardevice();
     line(0,30,30,30);
     line(30,30,30,275);
@@ -65,8 +109,870 @@ int main()
     line(555,350,555,420);
     line(590,350,590,420);
     line(625,350,625,420);
+    setcolor(5);
+    settextstyle(2,0,2);
+    outtextxy(10,50,"H");
+    outtextxy(10,85,"Li");
+    outtextxy(10,120,"Na");
+    outtextxy(10,155,"k");
+    outtextxy(10,190,"Rb");
+    outtextxy(10,225,"Cs");
+    outtextxy(10,260,"Fr");
+    outtextxy(40,85,"Be");
+    outtextxy(40,120,"Mg");
+    outtextxy(40,155,"Ca");
+    outtextxy(40,190,"Sr");
+    outtextxy(40,225,"Ba");
+    outtextxy(40,260,"Ra");
+    setcolor(14);
+    outtextxy(75,155,"Sc");
+    outtextxy(75,190,"Y");
+    outtextxy(75,225,"La");
+    outtextxy(75,260,"Ac");
+    outtextxy(110,155,"Ti");
+    outtextxy(110,190,"Zr");
+    outtextxy(110,225,"Hf");
+    outtextxy(110,260,"Rf");
+    outtextxy(145,155,"V");
+    outtextxy(145,190,"Nb");
+    outtextxy(145,225,"Ta");
+    outtextxy(145,260,"Db");
+    outtextxy(180,155,"Cr");
+    outtextxy(180,190,"Mo");
+    outtextxy(180,225,"W");
+    outtextxy(180,260,"Sg");
+    outtextxy(215,155,"Mn");
+    outtextxy(215,190,"Tc");
+    outtextxy(215,225,"Re");
+    outtextxy(215,260,"Bh");
+    outtextxy(250,155,"Fe");
+    outtextxy(250,190,"Ru");
+    outtextxy(250,225,"Os");
+    outtextxy(250,260,"Hs");
+    outtextxy(285,155,"Co");
+    outtextxy(285,190,"Rh");
+    outtextxy(285,225,"Ir");
+    outtextxy(285,260,"Mt");
+    outtextxy(320,155,"Ni");
+    outtextxy(320,190,"Pd");
+    outtextxy(320,225,"Pt");
+    outtextxy(315,260,"Uun");
+    outtextxy(355,155,"Cu");
+    outtextxy(355,190,"Ag");
+    outtextxy(355,225,"Au");
+    outtextxy(350,260,"Uuu");
+    outtextxy(390,155,"Zn");
+    outtextxy(390,190,"Cd");
+    outtextxy(390,225,"Hg");
+    outtextxy(385,260,"Uub");
+    setcolor(9);
+    outtextxy(425,155,"Ga");
+    outtextxy(425,190,"In");
+    outtextxy(425,225,"Ti");
+    outtextxy(420,260,"Uut");
+    outtextxy(425,120,"Al");
+    setcolor(6);
+    outtextxy(425,85,"B");
+    setcolor(9);
+    outtextxy(460,85,"C");
+    setcolor(6);
+    outtextxy(460,120,"Si");
+    outtextxy(460,155,"Ge");
+    setcolor(9);
+    outtextxy(460,190,"Sn");
+    outtextxy(460,225,"Pb");
+    outtextxy(455,260,"Uug");
+    outtextxy(495,85,"N");
+    outtextxy(495,120,"P");
+    setcolor(6);
+    outtextxy(495,155,"As");
+    outtextxy(495,190,"Sb");
+    setcolor(9);
+    outtextxy(495,225,"Bi");
+    outtextxy(490,260,"Uup");
+    outtextxy(530,85,"O");
+    outtextxy(530,120,"S");
+    outtextxy(530,155,"Se");
+    setcolor(6);
+    outtextxy(530,190,"Te");
+    outtextxy(530,225,"Po");
+    setcolor(9);
+    outtextxy(525,260,"Uuh");
+    outtextxy(565,85,"F");
+    outtextxy(565,120,"Cl");
+    outtextxy(565,155,"Br");
+    outtextxy(565,190,"I");
+    setcolor(6);
+    outtextxy(565,225,"At");
+    outtextxy(560,260,"Uus");
+    setcolor(4);
+    outtextxy(600,50,"He");
+    outtextxy(600,85,"Ne");
+    outtextxy(600,120,"Ar");
+    outtextxy(600,155,"Kr");
+    outtextxy(600,190,"Xe");
+    outtextxy(600,225,"Rn");
+    outtextxy(600,260,"Uuo");
+    setcolor(12);
+    settextstyle(0,0,2);
+    outtextxy(165,15,"PERIODIC TABLE");
+    settextstyle(0,0,1);
+    setcolor(8);
+    outtextxy(145,375,"Ce");
+    outtextxy(145,410,"Th");
+    outtextxy(180,375,"Pr");
+    outtextxy(180,410,"Pa");
+    outtextxy(215,375,"Nd");
+    outtextxy(215,410,"U");
+    outtextxy(250,375,"Pm");
+    outtextxy(250,410,"Np");
+    outtextxy(285,375,"Sm");
+    outtextxy(285,410,"Pu");
+    outtextxy(320,375,"Eu");
+    outtextxy(320,410,"Am");
+    outtextxy(355,375,"Gd");
+    outtextxy(355,410,"Cm");
+    outtextxy(390,375,"Tb");
+    outtextxy(390,410,"Bk");
+    outtextxy(425,375,"Dy");
+    outtextxy(425,410,"Cf");
+    outtextxy(460,375,"Ho");
+    outtextxy(460,410,"Es");
+    outtextxy(495,375,"Er");
+    outtextxy(495,410,"Fm");
+    outtextxy(530,375,"Tm");
+    outtextxy(530,410,"Md");
+    outtextxy(565,375,"Yb");
+    outtextxy(565,410,"No");
+    outtextxy(600,375,"Lu");
+    outtextxy(600,410,"Lr");
+    setcolor(2);
+    outtextxy(20,365,"Lanthanides--");
+    outtextxy(20,400,"Actinides--");
+    outtextxy(135,330,"|---------------------f-block Elements----------------------|");
+    outtextxy(70,120,"|------------d-block Elements-------------|");
+    outtextxy(412,15,"|-----p-block Elements-----|");
+    outtextxy(0,15,"|--------|");
+    outtextxy(0,0,"s-block Elements");
+    outtextxy(10,35,"1");
+    outtextxy(10,70,"3");
+    outtextxy(10,105,"11");
+    outtextxy(10,140,"19");
+    outtextxy(10,175,"37");
+    outtextxy(10,210,"55");
+    outtextxy(10,245,"87");
+    outtextxy(40,70,"4");
+    outtextxy(40,105,"12");
+    outtextxy(40,140,"20");
+    outtextxy(40,175,"38");
+    outtextxy(40,210,"56");
+    outtextxy(40,245,"88");
+    setcolor(6);
+    outtextxy(75,140,"21");
+    outtextxy(75,175,"39");
+    outtextxy(75,210,"57");
+    outtextxy(75,245,"89");
+    outtextxy(110,140,"22");
+    outtextxy(110,175,"40");
+    outtextxy(110,210,"72");
+    outtextxy(110,245,"104");
+    outtextxy(145,140,"23");
+    outtextxy(145,175,"41");
+    outtextxy(145,210,"73");
+    outtextxy(145,245,"105");
+    outtextxy(180,140,"24");
+    outtextxy(180,175,"42");
+    outtextxy(180,210,"74");
+    outtextxy(180,245,"106");
+    outtextxy(215,140,"25");
+    outtextxy(215,175,"43");
+    outtextxy(215,210,"75");
+    outtextxy(215,245,"107");
+    outtextxy(250,140,"26");
+    outtextxy(250,175,"44");
+    outtextxy(250,210,"76");
+    outtextxy(250,245,"108");
+    outtextxy(285,140,"27");
+    outtextxy(285,175,"45");
+    outtextxy(285,210,"77");
+    outtextxy(285,245,"109");
+    outtextxy(320,140,"28");
+    outtextxy(320,175,"46");
+    outtextxy(320,210,"78");
+    outtextxy(315,245,"110");
+    outtextxy(355,140,"29");
+    outtextxy(355,175,"47");
+    outtextxy(355,210,"79");
+    outtextxy(350,245,"111");
+    outtextxy(390,140,"30");
+    outtextxy(390,175,"48");
+    outtextxy(390,210,"80");
+    outtextxy(385,245,"112");
+    setcolor(7);
+    outtextxy(425,140,"31");
+    outtextxy(425,175,"49");
+    outtextxy(425,210,"81");
+    outtextxy(420,245,"113");
+    outtextxy(425,105,"13");
+    setcolor(6);
+    outtextxy(425,70,"5");
+    setcolor(5);
+    outtextxy(460,70,"6");
+    setcolor(9);
+    outtextxy(460,105,"14");
+    outtextxy(460,140,"32");
+    setcolor(4);
+    outtextxy(460,175,"50");
+    outtextxy(460,210,"82");
+    outtextxy(455,245,"114");
+    outtextxy(495,70,"7");
+    outtextxy(495,105,"15");
+    setcolor(5);
+    outtextxy(495,140,"33");
+    outtextxy(495,175,"51");
+    setcolor(7);
+    outtextxy(495.,210,"83");
+    outtextxy(490,245,"115");
+    outtextxy(530,70,"8");
+    outtextxy(530,105,"16");
+    outtextxy(530,140,"34");
+    setcolor(2);
+    outtextxy(530,175,"52");
+    outtextxy(530,210,"84");
+    setcolor(1);
+    outtextxy(525,245,"116");
+    outtextxy(565,70,"9");
+    outtextxy(565,105,"17");
+    outtextxy(565,140,"35");
+    outtextxy(565,175,"53");
+    setcolor(9);
+    outtextxy(565,210,"85");
+    outtextxy(560,245,"117");
+    setcolor(6);
+    outtextxy(600,35,"2");
+    outtextxy(600,70,"10");
+    outtextxy(600,105,"18");
+    outtextxy(600,140,"36");
+    outtextxy(600,175,"54");
+    outtextxy(600,210,"86");
+    outtextxy(600,245,"118");
+    setcolor(7);
+    outtextxy(145,360,"58");
+    outtextxy(145,395,"90");
+    outtextxy(180,360,"59");
+    outtextxy(180,395,"91");
+    outtextxy(215,360,"60");
+    outtextxy(215,395,"92");
+    outtextxy(250,360,"61");
+    outtextxy(250,395,"93");
+    outtextxy(285,360,"62");
+    outtextxy(285,395,"94");
+    outtextxy(320,360,"63");
+    outtextxy(320,395,"95");
+    outtextxy(355,360,"64");
+    outtextxy(355,395,"96");
+    outtextxy(390,360,"65");
+    outtextxy(390,395,"97");
+    outtextxy(425,360,"66");
+    outtextxy(425,395,"98");
+    outtextxy(460,360,"67");
+    outtextxy(460,395,"99");
+    outtextxy(495,360,"68");
+    outtextxy(495,395,"100");
+    outtextxy(530,360,"69");
+    outtextxy(530,395,"101");
+    outtextxy(565,360,"70");
+    outtextxy(565,395,"102");
+    outtextxy(600,360,"71");
+    outtextxy(600,395,"103");
+    setcolor(3);
+    //delay(1);
+    for(i=0;i<=500;i++)
+    {
+    settextstyle(0,0,2);
+    putpixel(rand()%720,rand()%500,rand());
+     delay(5);
+    }
+}
+void pt::putdata()
+{
+    char ch;
+    do
+    {
+
+        system("cls");
+        cout<<"\n\n\n\tACTION MENU";
+        cout<<"\n\n\t01. History of periodic table.";
+        cout<<"\n\n\t02. Introduction.";
+        cout<<"\n\n\t03. Atomic properties.";
+        cout<<"\n\n\t04. Applications.";
+        cout<<"\n\n\t05. For preodic table.";
+        cout<<"\n\n\t06. Exit";
+        cout<<"\n\n\tSelect Your Option (1-5) ";
+        cin>>ch;
+        system("cls");
+        switch(ch)
+        {
+        case '1':
+            cout<<"\n\n\tThe history of the periodic table is also a history of the discovery of the chemical elements.The first person ";
+            cout<<"in the history to discover a new elements was Henning Brand,a bankrupt German merchant.The most important event in its ";
+            cout<<"history occurred in 1869,when the table was published by Dimitri Mendeleev,who built upon earlier discoveries by ";
+            cout<<"scientist such as Antonie-Laurent de Lavoisier and John Newlands,who is Nevertheless generally given sole credit for\nits development.";
+            cout<<"\n\n\t press Enter for back to action menu......";
+
+            break;
+        case '2':
+            cout<<"\n\n\t The PERIODIC TABLE is a tabular arrangement of the chemical elements,";
+            cout<<"ordered by their atomic number,electronic configuration and recurring chemical ";
+            cout<<"properties,whose adopted structure shows periodic trends.Generally,within one";
+            cout<<"row(period)the elements are metals on the left and non-metals on the right,with";
+            cout<<"the elements having similar chemical behaviors being placed in the same column.";
+            cout<<"Table rows are commonly called PERIODs and columns are called GROUPs.Six groups";
+            cout<<"have accepted names as well as assigned numbers.This periodic table contains";
+            cout<<"Seven(7) numbers of period and Eighteen(18) numbers of group.";
+            cout<<"\n\n\t Press Enter for back to action menu........";
+
+            break;
+
+        case '3':
+            {
+            cout<<"\n\n\tAtomic properties of various element(if atom_num==0 then it'll get back to you to the action menu)....\n\n";
+              {
+    cleardevice();
+    int atom_num;
+    printf("Enter the atomic number:\n");
+    while(scanf("%d",&atom_num)==1)
+    {
+       if(atom_num==1)
+       {
+           cout<<"The searched element is Hydrogen(H).\n\nGeneral Properties:\n\nAppearance: Colorless gas\nStandard atomic weight:[1.0078,1.00811]conventional:1.008\nGroup,period:grp-1,period-1\nBlock:s-block\nMelting point:13.99k\Boiling point:20.271k"<<endl;
+       }
+       else if(atom_num==2)
+       {
+           cout<<"The searched element is Helium(He).\n\nGeneral Properties:\n\nAppearance: Colorless gas,exhibit a red -orange glow when placed in an electric field\nStandard atomic weight:4.002602\nGroup,period:grp-18(nobel gas),period-1\nBlock:s-block\nMelting point:0.95K\Boiling point:4.22K"<<endl;
+       }
+       else if(atom_num==3)
+       {
+           cout<<"The searched element is Lithium(Li).\n\nGeneral Properties:\n\nAppearance: Silvery-white\nStandard atomic weight:[6.938,6.997]conventional:6.94\nGroup,period:grp-1(alkali metals),period-2\nBlock:s-block\nMelting point:453.65K\Boiling point:1603K"<<endl;
+       }
+       else if(atom_num==4)
+       {
+           cout<<"The searched element is Beryllium(Be).\n\nGeneral Properties:\n\nAppearance: White-gray metallic\nStandard atomic weight:9.0121831\nGroup,period:grp-2(alkaline earth metals),period-2\nBlock:s-block\nMelting point:1560K\Boiling point:2742K"<<endl;
+       }
+       else if(atom_num==5)
+       {
+           cout<<"The searched element is Boron(B).\n\nGeneral Properties:\n\nAppearance:black-brown\nStandard atomic weight:[10.806,10.821]conventional:10.81\nGroup,period:grp-13(boron group),period-2\nBlock:p-block\nMelting point:2349K\Boiling point:4200K"<<endl;
+       }
+       else if(atom_num==6)
+       {
+           cout<<"The searched element is Carbon(C).\n\nGeneral Properties:\n\nAppearance:graphite,black diamond\nStandard atomic weight:[12.0096,12.0116]conventional:12.011\nGroup,period:grp-14(carbon group),period-2\nBlock:p-block"<<endl;
+       }
+       else if(atom_num==7)
+       {
+           cout<<"The searched element is Nitrogen(N).\n\nGeneral Properties:\n\nAppearance:colorless gas,liquid or solid\nStandard atomic weight:[14.00643,14.00728]conventional:14.007\nGroup,period:grp-15(pnictogens),period-2\nBlock:p-block\nMelting point:63.15K\nBoiling point:77.355K"<<endl;
+       }
+       else if(atom_num==8)
+       {
+           cout<<"The searched element is Oxygen(O).\n\nGeneral Properties:\n\nAppearance:colorless gas,liquid(pale blue)\nStandard atomic weight:[15.99903,15,99977]conventional:15.999\nGroup,period:grp-16(chalcogens),period-2\nBlock:p-block\nMelting point:54.36K\nBoiling point:90.188K"<<endl;
+       }
+       else if(atom_num==9)
+       {
+           cout<<"The searched element is Fluorine(F).\n\nGeneral Properties:\n\nAppearance:gas(very pale yellow),liquid(bright yellow),solid\nStandard atomic weight:18.998403163\nGroup,period:grp-17(halogens),period-2\nBlock:p-block\nMelting point:53.48K\nBoiling point:85.03K"<<endl;
+       }
+       else if(atom_num==10)
+       {
+           cout<<"The searched element is Neon(Ne).\n\nGeneral Properties:\n\nAppearance:colorless gas exhibiting an orange-red glow when placed in an electric field\nStandard atomic weight:20.1797\nGroup,period:grp-18(nobel gas),period-2\nBlock:p-block"<<endl;
+       }
+       else if(atom_num==11)
+       {
+           cout<<"The searched element is Sodium(Na).\n\nGeneral Properties:\n\nAppearance:silvery white metallic\nStandard atomic weight:22.98976928\nGroup,period:grp-1(alkali metals),period-3\nBlock:s-block\nMelting point:370.944K\nBoiling point:1156.090K"<<endl;
+       }
+       else if(atom_num==12)
+       {
+           cout<<"The searched element is Magnesium(Mg).\n\nGeneral Properties:\n\nAppearance: shiny gray solid\nStandard atomic weight:[24.304,24.307]conventional:24.305\nGroup,period:grp-2(alkaline earth metal),period-3\nBlock:s-block\nMelting point:923K\nBoiling point:1363K"<<endl;
+       }
+       else if(atom_num==13)
+       {
+           cout<<"The searched element is Aluminum(Al).\n\nGeneral Properties:\n\nAppearance:silvery gray metallic\nStandard atomic weight:26.9815385\nGroup,period:grp-13(boron group),period-3\nBlock:p-block\nMelting point:933.47K\nBoiling point:2743K"<<endl;
+       }
+       else if(atom_num==14)
+       {
+           cout<<"The searched element is Silicon(Si).\n\nGeneral Properties:\n\nAppearance:crystalline,reflective with bluish tinged faces\nStandard atomic weight:[28.084,28.086]conventional:28.085\nGroup,period:grp-14(carbon group),period-3\nBlock:p-block\nMelting point:1687K\nBoiling point:3538K"<<endl;
+       }
+       else if(atom_num==15)
+       {
+           cout<<"The searched element is Phosphorus(P).\n\nGeneral Properties:\n\nAppearance:colorless gas,waxy white,yellow,scarlet,red,violet,black\nStandard atomic weight:30.973761998\nGroup,period:grp-15(pnictogens),period-3\nBlock:p-block"<<endl;
+       }
+       else if(atom_num==16)
+       {
+           cout<<"The searched element is Sulfur(S).\n\nGeneral Properties:\n\nAppearance:lemon yellow sintered micro-crystals\nStandard atomic weight:[32.059,32.076]conventional:32.06\nGroup,period:grp-16(chalcogens),period-3\nBlock:p-block\nMelting point:388.36K\nBoiling point:717.8K"<<endl;
+       }
+       else if(atom_num==17)
+       {
+           cout<<"The searched element is Chlorine(Cl).\n\nGeneral Properties:\n\nAppearance:pale yellow-green gas\nStandard atomic weight:[35.446,35.457]conventional:35.45\nGroup,period:grp-17(halogens),period-3\nBlock:p-block\nMelting point:171.6K\nBoiling point:293.11K"<<endl;
+       }
+       else if(atom_num==18)
+       {
+           cout<<"The searched element is Argon(Ar).\n\nGeneral Properties:\n\nAppearance:colorless gas exhibiting a lilac/violet glow when placed in an electric field\nStandard atomic weight:39.948\nGroup,period:grp-18(nobel gases),period-3\nBlock:p-block\nMelting point:83.81K\nBoiling point:87.302K"<<endl;
+       }
+       else if(atom_num==19)
+       {
+           cout<<"The searched element is Potassium(K).\n\nGeneral Properties:\n\nAppearance:silvery gray\nStandard atomic weight:39.0983\nGroup,period:grp-1(alkali metals),period-4\nBlock:s-block\nMelting point:336.7K\nBoiling point:1032K"<<endl;
+       }
+       else if(atom_num==20)
+       {
+           cout<<"The searched element is Calcium(Ca).\n\nGeneral Properties:\n\nAppearance:dull gray;with a pale yellow tint\nStandard atomic weight:40.078\nGroup,period:grp-2(alkaline earth metals),period-4\nBlock:s-block\nMelting point:1115K\nBoiling point:1757K"<<endl;
+       }
+       else if(atom_num==21)
+       {
+           cout<<"The searched element is Scandium(Sc).\n\nGeneral Properties:\n\nAppearance:Silvery white\nStandard atomic weight:44.955908\nGroup,period:grp-3,period-4\nBlock:d-block\nMelting point:1814K\nBoiling point:3109K"<<endl;
+       }
+       else if(atom_num==22)
+       {
+           cout<<"The searched element is Titanium(Ti).\n\nGeneral Properties:\n\nAppearance:Silvery gray-white metallic\nStandard atomic weight:47.867\nGroup,period:grp-4(alkaline earth metals),period-4\nBlock:d-block\nMelting point:1941K\nBoiling point:3560K"<<endl;
+       }
+       else if(atom_num==23)
+       {
+           cout<<"The searched element is Vanadium(V).\n\nGeneral Properties:\n\nAppearance: blue-silver-gray metal\nStandard atomic weight:50.9415\nGroup,period:grp-5,period-4\nBlock:d-block\nMelting point:2183K\nBoiling point:3680K"<<endl;
+       }
+       else if(atom_num==24)
+       {
+           cout<<"The searched element is ChromiumCr).\n\nGeneral Properties:\n\nAppearance:Silvery metallic\nStandard atomic weight:51.9961\nGroup,period:grp-6,period-4\nBlock:d-block\nMelting point:2180K\nBoiling point:2944K"<<endl;
+       }
+       else if(atom_num==25)
+       {
+           cout<<"The searched element is Manganese(Mn).\n\nGeneral Properties:\n\nAppearance:Silvery metallic\nStandard atomic weight:54.938044\nGroup,period:grp-7,period-4\nBlock:d-block\nMelting point:1519K\nBoiling point:2334K"<<endl;
+       }
+       else if(atom_num==26)
+       {
+           cout<<"The searched element is Iron(Fe).\n\nGeneral Properties:\n\nAppearance:grayish metal\nStandard atomic weight:55.845\nGroup,period:grp-8,period-4\nBlock:d-block\nMelting point:1811K\nBoiling point:3134K"<<endl;
+       }
+       else if(atom_num==27)
+       {
+           cout<<"The searched element is Cobalt(Co).\n\nGeneral Properties:\n\nAppearance:bluish metal\nStandard atomic weight:58.933194\nGroup,period:grp-9,period-4\nBlock:d-block\nMelting point:1768K\nBoiling point:3200K"<<endl;
+       }
+
+       else if(atom_num==28)
+       {
+           cout<<"The searched element is Nickel(Ni).\n\nGeneral Properties:\n\nAppearance:metallic\nStandard atomic weight:58.6934\nGroup,period:grp-10,period-4\nBlock:d-block\nMelting point:1728K\nBoiling point:3003K"<<endl;
+       }
+       else if(atom_num==29)
+       {
+           cout<<"The searched element is Copper(Cu).\n\nGeneral Properties:\n\nAppearance:red-orange metallic luster\nStandard atomic weight:63.546\nGroup,period:grp-11,period-4\nBlock:d-block\nMelting point:1357.77K\nBoiling point:2835K"<<endl;
+       }
+       else if(atom_num==30)
+       {
+           cout<<"The searched element is Zinc(Zn).\n\nGeneral Properties:\n\nAppearance:silver-gray\nStandard atomic weight:65.38\nGroup,period:grp-12,period-4\nBlock:d-block\nMelting point:692.68K\nBoiling point:1180K"<<endl;
+       }
+       else if(atom_num==31)
+       {
+           cout<<"The searched element is Gallium(Ga).\n\nGeneral Properties:\n\nAppearance:silvery blue\nStandard atomic weight:69.723\nGroup,period:grp-13(boron group),period-4\nBlock:p-block\nMelting point:302.9146K\nBoiling point:2673K"<<endl;
+       }
+       else if(atom_num==32)
+       {
+           cout<<"The searched element is Germanium(Ge).\n\nGeneral Properties:\n\nAppearance:grayish-white\nStandard atomic weight:72.630\nGroup,period:grp-14(carbon group),period-4\nBlock:p-block\nMelting point:1211.40K\nBoiling point:3106K"<<endl;
+       }
+       else if(atom_num==33)
+       {
+           cout<<"The searched element is Arsenic(Ar).\n\nGeneral Properties:\n\nAppearance:gray,yellow,black\nStandard atomic weight:74.921595\nGroup,period:grp-15,period-4\nBlock:p-block"<<endl;
+       }
+       else if(atom_num==34)
+       {
+           cout<<"The searched element is Selenium(Se).\n\nGeneral Properties:\n\nAppearance:black,red and gray\nStandard atomic weight:78.971\nGroup,period:grp-16,period-4\nBlock:p-block\nMelting point:494K\nBoiling point:958K"<<endl;
+       }
+       else if(atom_num==35)
+       {
+           cout<<"The searched element is Bromine(Br).\n\nGeneral Properties:\n\nAppearance:reddish-brown\nStandard atomic weight:79.904\nGroup,period:grp-17(halogens),period-4\nBlock:p-block\nMelting point:265.8K\nBoiling point:332.0K"<<endl;
+       }
+       else if(atom_num==36)
+       {
+           cout<<"The searched element is Krypton(Kr).\n\nGeneral Properties:\n\nAppearance:colorless gas,exhibiting a whitish glow in an electric field\nStandard atomic weight:83.798\nGroup,period:grp-18(noble gases,period-4\nBlock:p-block\nMelting point:115.78K\nBoiling point:119.93K"<<endl;
+       }
+       else if(atom_num==37)
+       {
+           cout<<"The searched element is Rubidium(Rb).\n\nGeneral Properties:\n\nAppearance:gray-white\nStandard atomic weight:85.4678\nGroup,period:grp-1(alkali metals),period-5\nBlock:s-block\nMelting point:312.45K\nBoiling point:961K"<<endl;
+       }
+       else if(atom_num==38)
+       {
+           cout<<"The searched element is Strontium(Sr).\n\nGeneral Properties:\n\nAppearance:silver white metallic;with a pale yellow tint\nStandard atomic weight:87.62\nGroup,period:grp-2(alkaline earth metals),period-5\nBlock:s-block\nMelting point:1050K\nBoiling point:1650K"<<endl;
+       }
+       else if(atom_num==39)
+       {
+           cout<<"The searched element is Yttrium(Y).\n\nGeneral Properties:\n\nAppearance:silvery-white\nStandard atomic weight:88.90584\nGroup,period:grp-3,period-5\nBlock:d-block\nMelting point:1799K\nBoiling point:3203K"<<endl;
+       }
+       else if(atom_num==40)
+       {
+           cout<<"The searched element is Zirconium(Zr).\n\nGeneral Properties:\n\nAppearance:silvery-white\nStandard atomic weight:91.224\nGroup,period:grp-4,period-5\nBlock:d-block\nMelting point:3128K\nBoiling point:4650K"<<endl;
+       }
+       else if(atom_num==41)
+       {
+           cout<<"The searched element is Niobium(Nb).\n\nGeneral Properties:\n\nAppearance:gray metallic,bluish\nStandard atomic weight:92.90637\nGroup,period:grp-5,period-5\nBlock:d-block\nMelting point:2750K\nBoiling point:5017K"<<endl;
+       }
+       else if(atom_num==42)
+       {
+           cout<<"The searched element is Molybdenum(Mo).\n\nGeneral Properties:\n\nAppearance:gray metallic\nStandard atomic weight:95.95\nGroup,period:grp-6,period-5\nBlock:d-block\nMelting point:2896K\nBoiling point:4912K"<<endl;
+       }
+       else if(atom_num==43)
+       {
+           cout<<"The searched element is Technetium(Tc).\n\nGeneral Properties:\n\nAppearance:shiny gray metal\nStandard atomic weight:98( Most stable isotope)\nGroup,period:grp-7,period-5\nBlock:d-block\nMelting point:2430K\nBoiling point:4538K"<<endl;
+       }
+       else if(atom_num==44)
+       {
+           cout<<"The searched element is Ruthenium(Ru).\n\nGeneral Properties:\n\nAppearance:silvery white metallic\nStandard atomic weight:101.07\nGroup,period:grp-8,period-5\nBlock:d-block\nMelting point:2607K\nBoiling point:4423K"<<endl;
+       }
+       else if(atom_num==45)
+       {
+           cout<<"The searched element is Rhodium(Rh).\n\nGeneral Properties:\n\nAppearance:silvery white metallic\nStandard atomic weight:102.90550\nGroup,period:grp-9,period-5\nBlock:d-block\nMelting point:2237K\nBoiling point:3968K"<<endl;
+       }
+       else if(atom_num==46)
+       {
+           cout<<"The searched element is Palladium(Pd).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:106.42\nGroup,period:grp-10,period-5\nBlock:d-block\nMelting point:1828.05K\nBoiling point:3236K"<<endl;
+       }
+       else if(atom_num==47)
+       {
+           cout<<"The searched element is Silver(Ag).\n\nGeneral Properties:\n\nAppearance:white metal\nStandard atomic weight:107.8682\nGroup,period:grp-11,period-5\nBlock:d-block\nMelting point:1234.93K\nBoiling point:2435K"<<endl;
+       }
+       else if(atom_num==48)
+       {
+           cout<<"The searched element is Cadmium(Cd).\n\nGeneral Properties:\n\nAppearance:silvery bluish-gray metallic\nStandard atomic weight:112.414\nGroup,period:grp-12,period-5\nBlock:d-block\nMelting point:594.22K\nBoiling point:1040K"<<endl;
+       }
+       else if(atom_num==49)
+       {
+           cout<<"The searched element is Indium(In).\n\nGeneral Properties:\n\nAppearance:silvery-gray\nStandard atomic weight:114.818\nGroup,period:grp-13,period-5\nBlock:p-block\nMelting point:429.7485K\nBoiling point:2345K"<<endl;
+       }
+       else if(atom_num==50)
+       {
+           cout<<"The searched element is Tin(Sn).\n\nGeneral Properties:\n\nAppearance:silvery-white\nStandard atomic weight:118.710\nGroup,period:grp-14(carbon group),period-5\nBlock:p-block\nMelting point:505.08K\nBoiling point:2875K"<<endl;
+       }
+       else if(atom_num==51)
+       {
+           cout<<"The searched element is Antimony(Sb).\n\nGeneral Properties:\n\nAppearance:silvery-gray\nStandard atomic weight:121.760\nGroup,period:grp-15,period-5\nBlock:p-block\nMelting point:903.78K\nBoiling point:1908K"<<endl;
+       }
+       else if(atom_num==52)
+       {
+           cout<<"The searched element is Tellurium(Te).\n\nGeneral Properties:\n\nAppearance:silvery gray,brown-black powder\nStandard atomic weight:127.60\nGroup,period:grp-16,period-5\nBlock:p-block\nMelting point:722.66K\nBoiling point:1261K"<<endl;
+       }
+       else if(atom_num==53)
+       {
+           cout<<"The searched element is Iodine(I).\n\nGeneral Properties:\n\nAppearance:metallic gray(violet as a gas)\nStandard atomic weight:126.9044\nGroup,period:grp-17,period-5\nBlock:p-block\nMelting point:386.85K\nBoiling point:457.4K"<<endl;
+       }
+       else if(atom_num==54)
+       {
+           cout<<"The searched element is Xenon(Xe).\n\nGeneral Properties:\n\nAppearance:colorless gas,exhibiting a blue glow when placed in an electric field.\nStandard atomic weight:131.293\nGroup,period:grp-18,period-5\nBlock:p-block\nMelting point:161.40K\nBoiling point:165.051K"<<endl;
+       }
+      else if(atom_num==55)
+       {
+           cout<<"The searched element is Cesium(Cs).\n\nGeneral Properties:\n\nAppearance:pale gold\nStandard atomic weight:132.90545196\nGroup,period:grp-1(alkali metal),period-6\nBlock:s-block\nMelting point:301.7K\nBoiling point:944K"<<endl;
+       }
+      else if(atom_num==56)
+       {
+           cout<<"The searched element is Barium(Ba).\n\nGeneral Properties:\n\nAppearance:silvery-gray;with a pale yellow tint\nStandard atomic weight:137.327\nGroup,period:grp-2(alkaline earth metal),period-6\nBlock:s-block\nMelting point:1000K\nBoiling point:2118K"<<endl;
+       }
+      else if(atom_num==57)
+       {
+           cout<<"The searched element is Lanthanum(La) .\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:138.9054\nGroup,period:grp-3,period-6\nBlock:d-block\nMelting point:1193K\nBoiling point:3737K"<<endl;
+       }
+      else if(atom_num==58)
+       {
+           cout<<"The searched element is Cerium(Ce).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:140.116\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1068K\nBoiling point:3716K"<<endl;
+       }
+      else if(atom_num==59)
+       {
+           cout<<"The searched element is Praseodymium(Pr).\n\nGeneral Properties:\n\nAppearance:grayish white\nStandard atomic weight:140.90766\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1208K\nBoiling point:3403K"<<endl;
+       }
+      else if(atom_num==60)
+       {
+           cout<<"The searched element is Neodymium(Nd).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:144.242\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1297K\nBoiling point:3347K"<<endl;
+       }
+       else if(atom_num==61)
+       {
+           cout<<"The searched element is Promethium(Pm).\n\nGeneral Properties:\n\nAppearance:metallic\nStandard atomic weight:145(most stable isotope)\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1315K\nBoiling point:3273K"<<endl;
+       }
+       else if(atom_num==62)
+       {
+           cout<<"The searched element is Samarium(Sm).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:150.36\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1345K\nBoiling point:2173K"<<endl;
+       }
+      else if(atom_num==63)
+       {
+           cout<<"The searched element is Europium(Eu).\n\nGeneral Properties:\n\nAppearance:silvery white with a pale yellow tint\nStandard atomic weight:151.964\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1099K\nBoiling point:1802K"<<endl;
+       }
+      else if(atom_num==64)
+       {
+           cout<<"The searched element is Gadolinium(Gd).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:157.25\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1585K\nBoiling point:3273K"<<endl;
+       }
+      else if(atom_num==65)
+       {
+           cout<<"The searched element is Terbium(Tb).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:158.92535\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1629K\nBoiling point:3396K"<<endl;
+       }
+      else if(atom_num==66)
+       {
+           cout<<"The searched element is Dysprosium(Dy).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:162.500\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1680K\nBoiling point:2840K"<<endl;
+       }
+      else if(atom_num==67)
+       {
+           cout<<"The searched element is Holmium(Ho).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:164.93033\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1734K\nBoiling point:2873K"<<endl;
+       }
+      else if(atom_num==68)
+       {
+           cout<<"The searched element is Erbium(Er).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:167.259\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1802K\nBoiling point:3141K"<<endl;
+       }
+      else if(atom_num==69)
+       {
+           cout<<"The searched element is Thulium(Tm).\n\nGeneral Properties:\n\nAppearance:silvery gray\nStandard atomic weight:168.93422\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1818K\nBoiling point:2223K"<<endl;
+       }
+      else if(atom_num==70)
+       {
+           cout<<"The searched element is Ytterbium(Yb).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:173.045\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1097K\nBoiling point:1469K"<<endl;
+       }
+      else if(atom_num==71)
+       {
+           cout<<"The searched element is Lutetium(Lu).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:174.9668\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1925K\nBoiling point:3675K"<<endl;
+       }
+      else if(atom_num==72)
+       {
+           cout<<"The searched element is Hafnium(Hf).\n\nGeneral Properties:\n\nAppearance:Steel gray\nStandard atomic weight:178.49\nGroup,period:grp-4,period-6\nBlock:d-block\nMelting point:2506K\nBoiling point:4876K"<<endl;
+       }
+      else if(atom_num==73)
+       {
+           cout<<"The searched element is Tantalum(Ta).\n\nGeneral Properties:\n\nAppearance:gray blue\nStandard atomic weight:180.94788\nGroup,period:grp-5,period-6\nBlock:d-block\nMelting point:3290K\nBoiling point:5731K"<<endl;
+       }
+      else if(atom_num==74)
+       {
+           cout<<"The searched element is Tungsten(W).\n\nGeneral Properties:\n\nAppearance:grayish white,lustrous\nStandard atomic weight:183.84\nGroup,period:grp-6,period-6\nBlock:d-block\nMelting point:3695K\nBoiling point:6203K"<<endl;
+       }
+      else if(atom_num==75)
+       {
+           cout<<"The searched element is Rhenium(Re).\n\nGeneral Properties:\n\nAppearance:silvery-grayish\nStandard atomic weight:186.207\nGroup,period:grp-7,period-6\nBlock:d-block\nMelting point:3459K\nBoiling point:5903K"<<endl;
+       }
+      else if(atom_num==76)
+       {
+           cout<<"The searched element is Osmium(Os).\n\nGeneral Properties:\n\nAppearance:silvery,blue cast\nStandard atomic weight:190.23\nGroup,period:grp-8,period-6\nBlock:d-block\nMelting point:3306K\nBoiling point:5285K"<<endl;
+       }
+      else if(atom_num==77)
+       {
+           cout<<"The searched element is Iridium(Ir).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:192.217\nGroup,period:grp-9,period-6\nBlock:d-block\nMelting point:2719K\nBoiling point:4403K"<<endl;
+       }
+       else if(atom_num==78)
+       {
+           cout<<"The searched element is Platinum(Pt).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:195.084\nGroup,period:grp-10,period-6\nBlock:d-block\nMelting point:2014.4K\nBoiling point:4098K"<<endl;
+       }
+       else if(atom_num==79)
+       {
+           cout<<"The searched element is Gold(Au).\n\nGeneral Properties:\n\nAppearance:metallic yellow\nStandard atomic weight:196.966569\nGroup,period:grp-11,period-6\nBlock:d-block\nMelting point:1337.33K\nBoiling point:3243K"<<endl;
+       }
+       else if(atom_num==80)
+       {
+           cout<<"The searched element is Mercury(Hg).\n\nGeneral Properties:\n\nAppearance:silvery\nStandard atomic weight:200.592\nGroup,period:grp-12,period-6\nBlock:d-block\nMelting point:234.3210K\nBoiling point:629.88K"<<endl;
+       }
+       else if(atom_num==81)
+       {
+           cout<<"The searched element is Thallium(Tl).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:204.38\nGroup,period:grp-13(boron group),period-6\nBlock:p-block\nMelting point:577K\nBoiling point:1746K"<<endl;
+       }
+       else if(atom_num==82)
+       {
+           cout<<"The searched element is Lead(Pd).\n\nGeneral Properties:\n\nAppearance:metallic gray\nStandard atomic weight:207.2\nGroup,period:grp-14(carbon group),period-6\nBlock:p-block\nMelting point:600.61K\nBoiling point:2022K"<<endl;
+       }
+       else if(atom_num==83)
+       {
+           cout<<"The searched element is Bismuth(Bi).\n\nGeneral Properties:\n\nAppearance:lustrous brownish silver\nStandard atomic weight:208.98040\nGroup,period:grp-15,period-6\nBlock:p-block\nMelting point:544.7K\nBoiling point:1837K"<<endl;
+       }
+       else if(atom_num==84)
+       {
+           cout<<"The searched element is Polonium(Po).\n\nGeneral Properties:\n\nAppearance:silvery\nStandard atomic weight:209(most stable isotope)\nGroup,period:grp-16(chalcogens),period-6\nBlock:p-block\nMelting point:527K\nBoiling point:1235K"<<endl;
+       }
+       else if(atom_num==85)
+       {
+           cout<<"The searched element is Astatine(At).\n\nGeneral Properties:\n\nAppearance:UNKNOWN,probably metallic\nStandard atomic weight:210(most stable isotope)\nGroup,period:grp-17(halogens),period-6\nBlock:p-block\nMelting point:575K\nBoiling point:610K"<<endl;
+       }
+       else if(atom_num==86)
+       {
+           cout<<"The searched element is Radon(Rn).\n\nGeneral Properties:\n\nAppearance:colorless gas,occasionally glows green or red in discharge tubes\nStandard atomic weight:222(most stable isotope)\nGroup,period:grp-18(noble gas),period-6\nBlock:p-block\nMelting point:202K\nBoiling point:211.5K"<<endl;
+       }
+      else if(atom_num==87)
+       {
+           cout<<"The searched element is Francium(Fr).\n\nGeneral Properties:\n\nAppearance:    \nStandard atomic weight:223(stable isotope)\nGroup,period:grp-1(alkali metals),period-7\nBlock:s-block\nMelting point:300K\nBoiling point:950K"<<endl;
+       }
+      else if(atom_num==88)
+       {
+           cout<<"The searched element is Radium(Ra).\n\nGeneral Properties:\n\nAppearance:silvery white metallic\nStandard atomic weight:226(most stable isotope)\nGroup,period:grp-2(alkaline earth metal),period-7\nBlock:s-block\nMelting point:973K\nBoiling point:2010K"<<endl;
+       }
+      else if(atom_num==89)
+       {
+           cout<<"The searched element is Actinium(Ac).\n\nGeneral Properties:\n\nAppearance:silvery white,glowing with an eerie blue light;sometimes with a golden cast\nStandard atomic weight:227(most stable isotope)\nGroup,period:grp-3,period-7\nBlock:d-block\nMelting point:1500K\nBoiling point:3500K"<<endl;
+       }
+      else if(atom_num==90)
+       {
+           cout<<"The searched element is Thorium(Th).\n\nGeneral Properties:\n\nAppearance:silvery,often with black tarnish \nStandard atomic weight:232.0377\nGroup,period:grp-  ,period-7\nBlock:f-block\nMelting point:2023K\nBoiling point:5061K"<<endl;
+       }
+      else if(atom_num==91)
+       {
+           cout<<"The searched element is Protactinium(Pa).\n\nGeneral Properties:\n\nAppearance: bright,silvery metallic luster\nStandard atomic weight:231.03588\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:1841K\nBoiling point:4300K"<<endl;
+       }
+      else if(atom_num==92)
+       {
+           cout<<"The searched element is Uranium(U).\n\nGeneral Properties:\n\nAppearance:silvery gray metallic;corrodes to a spilling black oxide black oxide coat in air\nStandard atomic weight:238.0289\nGroup,period:grp-  ,period-7\nBlock:f-block\nMelting point:1405.3K\nBoiling point:4404K"<<endl;
+       }
+      else if(atom_num==93)
+       {
+           cout<<"The searched element is Neptunium(Np).\n\nGeneral Properties:\n\nAppearance:silvery metallic\nStandard atomic weight:237(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:912K\nBoiling point:4447K"<<endl;
+       }
+      else if(atom_num==94)
+       {
+           cout<<"The searched element is Plutonium(Pu).\n\nGeneral Properties:\n\nAppearance:silvery white,tarnishing to dark gray in air\nStandard atomic weight:244(most stable isotope)\nGroup,period:grp-  ,period-7\nBlock:f-block\nMelting point:912.5K\nBoiling point:3505K"<<endl;
+       }
+      else if(atom_num==95)
+       {
+           cout<<"The searched element is Americium(Am).\n\nGeneral Properties:\n\nAppearance:silvery white\nStandard atomic weight:243(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:1449K\nBoiling point:2880K"<<endl;
+       }
+      else if(atom_num==96)
+       {
+           cout<<"The searched element is Curium(Cm).\n\nGeneral Properties:\n\nAppearance: silvery metallic,glows purple in the dark\nStandard atomic weight:247(most stable isotope)\nGroup,period:grp- ,period-6\nBlock:f-block\nMelting point:1613K\nBoiling point:3383K"<<endl;
+       }
+      else if(atom_num==97)
+       {
+           cout<<"The searched element is Berkelium(Bk).\n\nGeneral Properties:\n\nAppearance:silvery\nStandard atomic weight:247(most stable isotope)\nGroup,period:grp-  ,period-7\nBlock:f-block\nMelting point:1259K\nBoiling point:2900K"<<endl;
+       }
+      else if(atom_num==98)
+       {
+           cout<<"The searched element is Californium(Cf).\n\nGeneral Properties:\n\nAppearance:silvery\nStandard atomic weight:251(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:1173K\nBoiling point:1743K"<<endl;
+       }
+      else if(atom_num==99)
+       {
+           cout<<"The searched element is Einsteinium(Es).\n\nGeneral Properties:\n\nAppearance:silvery;glows blue in the dark\nStandard atomic weight:252(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:1133K\nBoiling point:1269K"<<endl;
+       }
+      else if(atom_num==100)
+       {
+           cout<<"The searched element is Fermium(Fm).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:252(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:1800K\nBoiling point: "<<endl;
+       }
+      else if(atom_num==101)
+       {
+           cout<<"The searched element is Mendelevium(Md).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:258(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:f-block\nMelting point:1100K\nBoiling point: "<<endl;
+       }
+      else if(atom_num==102)
+       {
+           cout<<"The searched element is Nobelium(No).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:259(most stable isotope)\nGroup,period:grp-  ,period-6\nBlock:f-block\nMelting point:1100K(predicted)\nBoiling point: "<<endl;
+       }
+      else if(atom_num==103)
+       {
+           cout<<"The searched element is Lawrencium(Lr).\n\nGeneral Properties:\n\nAppearance:silvery(predicted)\nStandard atomic weight:266(most stable isotope)\nGroup,period:grp- ,period-7\nBlock:d-block\nMelting point:1900K(predicted)\nBoiling point: "<<endl;
+       }
+      else if(atom_num==104)
+       {
+           cout<<"The searched element is Rutherfordium(Rf).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:267(most stable isotope)\nGroup,period:grp-4,period-7\nBlock:d-block\nMelting point:2400K(predicted)\nBoiling point:5800K(predicted)"<<endl;
+       }
+      else if(atom_num==105)
+       {
+           cout<<"The searched element is Dubnium(Db).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:268(most stable isotope)\nGroup,period:grp-5,period-7\nBlock:d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==106)
+       {
+           cout<<"The searched element is Seaborgium(Sg).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:269(most stable isotope)\nGroup,period:grp-6,period-7\nBlock:d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==107)
+       {
+           cout<<"The searched element is Bohrium(Bh).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:270(most stable isotope)\nGroup,period:grp-7,period-7\nBlock:d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==108)
+       {
+           cout<<"The searched element is Hassium(Hs).\n\nGeneral Properties:\n\nAppearance:silvery(predicted)\nStandard atomic weight:277(most stable isotope)\nGroup,period:grp-8,period-7\nBlock:   d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==109)
+       {
+           cout<<"The searched element is Meitnerium(Mt).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:278(most stable isotope)\nGroup,period:grp-9,period-7\nBlock:     d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==110)
+       {
+           cout<<"The searched element is Darmstadtium(Ds).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:281(most stable isotope)\nGroup,period:grp-10,period-7\nBlock:     d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==111)
+       {
+           cout<<"The searched element is Roentgenium(Rg).\n\nGeneral Properties:\n\nAppearance:silvery (predicted)\nStandard atomic weight:282(most stable isotope)\nGroup,period:grp-11,period-7\nBlock:     d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==112)
+       {
+           cout<<"The searched element is Copernicium(Cn).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:285(most stable isotope)\nGroup,period:grp-12,period-7\nBlock:    d-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==113)
+       {
+           cout<<"The searched element is Nihonium(Nh).\n\nGeneral Properties:\n\nAppearance:  \nStandard atomic weight:286(most stable isotope)\nGroup,period:grp-13,period-7\nBlock:p-block\nMelting point:700K(predicted)\nBoiling point:1430K(predicted)"<<endl;
+       }
+      else if(atom_num==114)
+       {
+           cout<<"The searched element is Flerovium(Fl).\n\nGeneral Properties:\n\nAppearance:\nStandard atomic weight:289(most stable isotope)\nGroup,period:grp-14(carbon group),period-7\nBlock:p-block\nMelting point: \nBoiling point: "<<endl;
+       }
+      else if(atom_num==115)
+       {
+           cout<<"The searched element is Moscovium(Mc).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:290(most stable isotope)\nGroup,period:grp-15(pinctogens),period-7\nBlock:p-block\nMelting point:670K\nBoiling point:~1400K"<<endl;
+       }
+      else if(atom_num==116)
+       {
+           cout<<"The searched element is Livermorium(Lv).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:293(most stable isotope)\nGroup,period:grp-16(chalcogens),period-7\nBlock:p-block\nMelting point:637-780K\nBoiling point:1035-1135K"<<endl;
+       }
+      else if(atom_num==117)
+       {
+           cout<<"The searched element is Tennessine(Ts).\n\nGeneral Properties:\n\nAppearance:semi-metallic\nStandard atomic weight:294(most stable isotope)\nGroup,period:grp-17,period-7\nBlock:p-block\nMelting point:623-823K\nBoiling point:883K"<<endl;
+       }
+       else if(atom_num==118)
+       {
+           cout<<"The searched element is Oganesson(Og).\n\nGeneral Properties:\n\nAppearance: \nStandard atomic weight:294(most stable isotope)\nGroup,period:grp-18(noble gas),period-7\nBlock:p-block\nMelting point: \nBoiling point:350K(predicted)"<<endl;
+       }
+    else if(atom_num==0||atom_num>118)
+
+       {
+        cout<<"Exit";
+        system("cls");
+          cout<<"\n\n\t press Enter for back to action menu......";
+
+            break;
+
+       }
+    }
+
+}
+            }
+
+           break;
+        case '4':
+            cout<<"\n\n\tThough this modern periodic table is a chemistry tool,it is useful in every subject of science.";
+            cout<<"It is useful in....\n 1. Material Science.\n 2. Medical Science.\n 3. Engineering Field.\n 4. Space Analysis.etc";
+            cout<<"\n\n\t Press enter for back to the Action menu.....";
+
+            break;
 
 
-    //closegraph();
+        case '6':
+           cout<<"Press Enter for permanently exit.....\n\n";
+            exit(0);
+
+        case '5':
+            //int gm,gd=DETECT,i,j;
+            //initgraph(&gd,&gm,"C:\TC\BGI");
+            pt p;
+            p.showtable();
+
+            cout<<"Enter 1 to exit"<<endl;
+            cin>>a;
+            if(a==1)
+           {
+               closegraph();
+               a=0;
+           }
+            break;
+        default :
+            cout<<"\a";
+        }
+        cin.ignore();
+        cin.get();
+    }while(ch!='6');
+}
+
+int main()
+{
+    pt p;
+
+    p.putdata();
+  //  p.getdata();
+  //closegraph();
     getch();
+
 }
